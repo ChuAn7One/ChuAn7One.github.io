@@ -1,0 +1,17 @@
+education:
+  - university: Jilin University
+    school: School of Artificial Intelligence
+    program: Master's studies
+    years: 2026–present
+  - university: Harbin Engineering University
+    school: School of Mathematical Sciences
+    program: Undergraduate studies in Applied Mathematics
+    years: 2022–2026
+
+awards:
+  - year: 2026
+    prize: Third National Prize
+  - year: 2025
+    prize: Second National Prize
+  - year: 2024
+    prize: Second National Prize

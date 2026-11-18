@@ -12,23 +12,23 @@ site_theme               : "air" # The available themes options are "default", "
 title                    : "Chuanhe Zhou"
 title_separator          : "-"
 name                     : &name "Chuanhe Zhou"
-description              : &description "Chuanhe Zhou's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Chuanhe Zhou is a master's student at Jilin University interested in robot learning and world models."
 url                      : https://chuan7one.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 # baseurl                  : 
-repository               : "ChuAn7one/ChuAn7one.github.io"
+repository               : "ChuAn7One/ChuAn7One.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "https://avatars.githubusercontent.com/u/171475125?s=320"
   name             : "Chuanhe Zhou"
   pronouns         : "he/him"
-  bio              : "undergradute student at Harbin Engineering University, majoring in Mathematics and Artificial Intelligence. My research interests include Robotics, Reinforcement Learning and Computer Vision."
-  location         : "Jilin, China"
-  employer         : "Harbin Engineering University"
+  bio              : "Master's student in the School of Artificial Intelligence. Interested in robot learning and world models."
+  location         : "Changchun, China"
+  employer         : "Jilin University"
   uri              : # URL
   email            : "chuan7one@gmail.com" 
 
@@ -50,7 +50,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "CHuan7One"
+  github           : "ChuAn7One"
   kaggle           : # Username
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -186,6 +186,26 @@ exclude:
   - local
   - log
   - node_modules
+  - _pages/archive-layout-with-content.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - files/bibtex1.bib
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
+  - markdown_generator
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
   - package.json*
   - Rakefile
   - README
@@ -279,8 +299,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
+      share: false
+      comments: false
   # _talks
   - scope:
       path: ""
