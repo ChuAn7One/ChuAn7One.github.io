@@ -1,14 +1,11 @@
 ---
 permalink: /
 title: "Chuanhe Zhou"
-author_profile: true
+layout: academic-home
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I'm a first-year master's student in the School of Artificial Intelligence at Jilin University. I studied Applied Mathematics at Harbin Engineering University.
-
-My current research interests are **robot learning** and **world models**, especially how robots can learn predictive representations from experience to support planning and control. Through RoboMaster, I've worked on multi-sensor perception and state estimation for mobile robots.
-
-{% include profile-sections.md %}
+I'm interested in how robots learn to predict the consequences of their actions and use those predictions to plan. My background is in applied mathematics and robot perception.

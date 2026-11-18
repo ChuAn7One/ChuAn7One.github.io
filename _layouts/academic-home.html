@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<main class="home-shell">
+  <section class="home-hero" aria-labelledby="home-title" data-pointer-surface>
+    <div class="home-intro">
+      <div class="home-affiliation">
+        <img src="{{ site.author.avatar | escape }}" alt="" width="44" height="44" fetchpriority="high">
+        <div>
+          <strong>Jilin University</strong>
+          <span>School of Artificial Intelligence</span>
+        </div>
+      </div>
+      <h1 id="home-title">{{ page.title | escape }}</h1>
+      <p class="home-role">First-year master’s student</p>
+      <p class="home-interests">Robot learning <span aria-hidden="true">·</span> World models</p>
+      <div class="home-intro-text">{{ content }}</div>
+      <div class="home-actions">
+        <a class="home-action home-action--primary" href="#home-projects">Explore projects <span aria-hidden="true">↘</span></a>
+        <a class="home-action" href="{{ '/cv/' | relative_url }}">View CV <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <figure class="home-signal" aria-labelledby="home-signal-caption">
+      <div class="home-signal-map">
+        <canvas width="440" height="340" aria-hidden="true" data-signal-map></canvas>
+      </div>
+      <figcaption id="home-signal-caption">
+        <span>Perception &amp; prediction</span>
+        <span class="home-signal-key">
+          <span>Observation</span>
+          <span>Prediction</span>
+        </span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="home-projects" id="home-projects" aria-labelledby="home-projects-title">
+    <h2 id="home-projects-title">RoboMaster projects</h2>
+    <p class="home-section-note">Work with Harbin Engineering University’s 创梦之翼 team.</p>
+    <div class="home-project-grid">
+      {% for project in site.portfolio %}
+        {% assign project_slug = project.url | split: '/' | last %}
+        <article class="home-project home-project--{{ project_slug }}" data-pointer-surface data-scroll-reveal>
+          <a href="{{ project.url | relative_url }}">
+            <div class="home-project-art" aria-hidden="true"><span></span></div>
+            <div class="home-project-copy">
+              <h3>{{ project.title | escape }}</h3>
+              <p>{{ project.excerpt | strip_html | escape }}</p>
+              <span class="home-project-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="home-history">
+    <section aria-labelledby="home-education-title" data-scroll-reveal>
+      <h2 id="home-education-title">Education</h2>
+      <ul class="home-timeline">
+        {% for degree in site.data.profile.education %}
+          <li>
+            <span class="home-years">{{ degree.years }}</span>
+            <strong>{{ degree.university }}</strong>
+            <span>{{ degree.school }}</span>
+            <span>{{ degree.program }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section aria-labelledby="home-awards-title" data-scroll-reveal>
+      <h2 id="home-awards-title">RoboMaster awards</h2>
+      <ul class="home-awards">
+        {% for award in site.data.profile.awards %}
+          <li><span class="home-years">{{ award.year }}</span><strong>{{ award.prize }}</strong></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+
+  <section class="home-contact" aria-labelledby="home-contact-title" data-scroll-reveal>
+    <div>
+      <h2 id="home-contact-title">Contact</h2>
+      <p>{{ site.author.location | escape }}</p>
+    </div>
+    <div class="home-actions">
+      <a class="home-action" href="mailto:{{ site.author.email | escape }}">Email <span aria-hidden="true">↗</span></a>
+      <a class="home-action" href="https://github.com/{{ site.author.github | escape }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="home-action" href="{{ site.author.orcid | escape }}">ORCID <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
