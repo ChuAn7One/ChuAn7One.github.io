@@ -70,11 +70,14 @@ layout: default
         {% endfor %}
       </ul>
     </section>
-    <section aria-labelledby="home-awards-title" data-scroll-reveal>
-      <h2 id="home-awards-title">RoboMaster awards</h2>
+    <section aria-labelledby="home-competition-title" data-scroll-reveal>
+      <h2 id="home-competition-title">Competition Experience</h2>
       <ul class="home-awards">
         {% for award in site.data.profile.awards %}
-          <li><span class="home-years">{{ award.year }}</span><strong>{{ award.prize }}</strong></li>
+          <li>
+            <span class="home-years">{{ award.year }}</span>
+            <span><strong>{{ award.competition }}</strong> · {{ award.prize }}</span>
+          </li>
         {% endfor %}
       </ul>
     </section>

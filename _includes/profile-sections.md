@@ -4,10 +4,10 @@
 - **{{ degree.university }}** · {{ degree.years }}<br>
   {{ degree.school }} · {{ degree.program }}
 {% endfor %}
-## RoboMaster Awards
+## Competition Experience
 
 {% for award in site.data.profile.awards -%}
-- **{{ award.year }} RoboMaster** · {{ award.prize }}
+- **{{ award.year }} {{ award.competition }}** · {{ award.prize }}
 {% endfor %}
 ## RoboMaster Projects
 
